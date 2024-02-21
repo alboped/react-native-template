@@ -84,4 +84,4 @@ yarn ios
 
 - 了解更多react-native相关信息，查看官方文档 [中文](https://rn.nodejs.cn/) [英文](https://reactnative.dev/)
 
-- 故障排除 [中文](https://reactnative.dev/docs/troubleshooting) [英文](https://rn.nodejs.cn/docs/troubleshooting)
+- 故障排除 [中文](https://rn.nodejs.cn/docs/troubleshooting) [英文](https://reactnative.dev/docs/troubleshooting)
