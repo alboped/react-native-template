@@ -1,13 +1,13 @@
-import * as React from 'react';
-import {View, Text} from 'react-native';
+import React from 'react';
+import { View, Text, Image } from 'react-native';
 
-console.log('Toast load');
+function HomePage(props) {
+  console.log(props);
 
-function HomePage({navigation}) {
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>首页</Text>
-      <Text onPress={() => navigation.push('Button')}>按钮</Text>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>react-native-template-alboped</Text>
+      <Text onPress={() => props.navigation.jumpTo('Components')}>查看组件</Text>
     </View>
   );
 }

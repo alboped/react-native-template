@@ -1,12 +1,10 @@
-import * as React from 'react';
-import {View, Text} from 'react-native';
-
-console.log('Toast load');
+import React from 'react';
+import { View, Text } from 'react-native';
 
 function ButtonPage() {
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>按钮</Text>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Toast提示</Text>
     </View>
   );
 }
