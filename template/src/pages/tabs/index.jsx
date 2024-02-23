@@ -1,27 +1,22 @@
+import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Icon, Colors } from 'react-native-ui-lib';
+import { Icon, Assets } from 'react-native-ui-lib';
 
 const Tab = createBottomTabNavigator();
+
+const imgMap = {
+  Home: Assets.icons.smiling,
+  Components: Assets.icons.grid,
+  Mine: Assets.icons.user,
+};
 
 function Tabs() {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ color, size }) => {
-          const imgMap = {
-            Home: 'https://cdn-icons-png.flaticon.com/512/4562/4562332.png',
-            Components: 'https://cdn-icons-png.flaticon.com/512/3817/3817538.png',
-            Mine: 'https://cdn-icons-png.flaticon.com/512/4210/4210226.png',
-          };
-
           return (
-            <Icon
-              source={{
-                uri: imgMap[route.name],
-              }}
-              size={size}
-              tintColor={color}
-            />
+            <Icon source={imgMap[route.name]} size={size} tintColor={color} />
           );
         },
       })}>

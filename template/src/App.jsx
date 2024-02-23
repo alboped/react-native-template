@@ -2,18 +2,20 @@ import React, { useMemo } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import '@/assets';
+import '@/config';
+
 const Stack = createNativeStackNavigator();
 
 const pages = require.context('./pages', true, /\.nav.jsx/);
 
 function App() {
   const screens = useMemo(() => {
-    return pages.keys().map(key => {
+    return pages.keys().map((key) => {
       const { name, component, ...other } = pages(key)?.default || {};
       return (
         name && (
           <Stack.Screen
-            abc="sdf"
             key={name}
             name={name}
             getComponent={() => component}
@@ -26,7 +28,7 @@ function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{ headerBackTitleVisible: false }}>
         <Stack.Screen
           name="Tabs"
           component={require('./pages/tabs').default}

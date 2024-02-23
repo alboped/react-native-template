@@ -74,7 +74,7 @@ yarn ios
 
 - **Android** 和 **iOS** 点击 <kbd>R</kbd> 刷新应用
 
-### 调试
+### 🔧 调试
 
 - 命令行中点击 <kbd>J</kbd> 打开 react-native 调试工具、或使用 `Flipper` 进行调试
 
@@ -86,4 +86,4 @@ yarn ios
 
 - 故障排除 [中文](https://rn.nodejs.cn/docs/troubleshooting) [英文](https://reactnative.dev/docs/troubleshooting)
 
-:正在持续完善中，可以期待一下哦！😘
+正在持续完善中！😘

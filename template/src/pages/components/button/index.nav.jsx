@@ -1,10 +1,15 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button, Colors } from 'react-native-ui-lib';
 
-function ButtonPage({ navigation }) {
+function ButtonPage() {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <View padding-20>
       <Text>按钮</Text>
+      <Button
+        label="Press"
+        size={Button.sizes.medium}
+        backgroundColor={Colors.red30}
+      />
     </View>
   );
 }
