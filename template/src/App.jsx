@@ -1,12 +1,11 @@
 import React, { useMemo } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
+import { Colors } from '@/components/ui-lib';
 import '@/assets';
 import '@/config';
 
 const Stack = createNativeStackNavigator();
-
 const pages = require.context('./pages', true, /\.nav.jsx/);
 
 function App() {
@@ -28,7 +27,13 @@ function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerBackTitleVisible: false }}>
+      <Stack.Navigator
+        screenOptions={{
+          headerBackTitleVisible: false,
+          headerTitleAlign: 'center',
+          contentStyle: { backgroundColor: Colors.grey80 },
+        }}
+      >
         <Stack.Screen
           name="Tabs"
           component={require('./pages/tabs').default}

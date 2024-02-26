@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, Assets } from '@/components/ui-lib';
+import { View, Text, Image, Button, Assets } from '@/components/ui-lib';
 
 function HomePage(props) {
   console.log(props);
@@ -11,11 +11,14 @@ function HomePage(props) {
         resizeMode="contain"
         style={{ width: 150, height: 200 }}
       />
-      <Text h2>react-native-template-alboped</Text>
-      <Text>开箱即用的react-native模版</Text>
-      <Text onPress={() => props.navigation.jumpTo('Components')}>
-        查看组件
-      </Text>
+      <Text h5>react-native-template-alboped</Text>
+      <View padding-20>
+        <Text>开箱即用的react-native模版</Text>
+      </View>
+      <Button
+        onPress={() => props.navigation.jumpTo('Components')}
+        label="查看组件"
+      />
     </View>
   );
 }

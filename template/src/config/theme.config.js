@@ -3,6 +3,8 @@
  */
 import { Colors, Typography } from '@/components/ui-lib';
 
+console.log(Colors);
+
 Colors.loadColors({
   error: '#ff2442',
   success: '#00CD8B',
@@ -15,4 +17,5 @@ Typography.loadTypographies({
   h3: { fontSize: 38, fontWeight: '500', lineHeight: 56 },
   h4: { fontSize: 32, fontWeight: '500', lineHeight: 48 },
   h5: { fontSize: 26, fontWeight: '500', lineHeight: 40 },
+  h6: { fontSize: 20, fontWeight: '500', lineHeight: 36 },
 });

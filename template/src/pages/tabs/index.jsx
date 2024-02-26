@@ -1,12 +1,13 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Icon, Assets } from 'react-native-ui-lib';
+import { Icon, Assets, Colors } from 'react-native-ui-lib';
 
 const Tab = createBottomTabNavigator();
 
 const imgMap = {
   Home: Assets.icons.smiling,
   Components: Assets.icons.grid,
+  Api: Assets.icons.code,
   Mine: Assets.icons.user,
 };
 
@@ -14,6 +15,7 @@ function Tabs() {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
+        sceneContainerStyle: { backgroundColor: Colors.grey10 },
         tabBarIcon: ({ color, size }) => {
           return (
             <Icon source={imgMap[route.name]} size={size} tintColor={color} />
@@ -29,6 +31,11 @@ function Tabs() {
         name="Components"
         component={require('../components').default}
         options={{ title: '组件' }}
+      />
+      <Tab.Screen
+        name="Api"
+        component={require('../api').default}
+        options={{ title: 'API' }}
       />
       <Tab.Screen
         name="Mine"
