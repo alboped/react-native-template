@@ -1,79 +1,96 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+## react-native-template-alboped
 
-# Getting Started
+> 这是一个 [**React Native**](https://reactnative.dev) 项目模版, 基于react-native官方模版.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+### 主要特点
 
-## Step 1: Start the Metro Server
+- `react-navigation` 作为页面路由；
+- `react-native-ui-lib` 作为基础组件库；
+- `zustand` 做状态管理；
+- `tailwind` 做样式管理；
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## 开始
 
-To start Metro, run the following command from the _root_ of your React Native project:
+### 💡 初始化项目
 
 ```bash
-# using npm
-npm start
+npx react-native init myApp --template react-native-template-alboped
+```
 
-# OR using Yarn
+### 🛠️ 安装依赖
+
+安装npm依赖
+
+```bash
+# npm
+npm install
+
+# Yarn
+yarn
+```
+
+安装pod依赖
+
+```bash
+# npm
+npm run pod-install
+
+# Yarn
+yarn pod-install
+```
+
+### 🚀 启动项目
+
+#### 启动RN服务
+
+```bash
+# npm
+npm run start
+
+# Yarn
 yarn start
 ```
 
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
+#### 启动 Android 应用
 
 ```bash
-# using npm
+# npm
 npm run android
 
-# OR using Yarn
+# Yarn
 yarn android
 ```
 
-### For iOS
+#### 启动 iOS 应用
 
 ```bash
-# using npm
+# npm
 npm run ios
 
-# OR using Yarn
+# Yarn
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+如果顺利，会自动启动android模拟器或者iOS模拟器并运行App
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+### 🎉 开始开发
 
-## Step 3: Modifying your App
+- **Android** 点击 <kbd>Ctrl</kbd> + <kbd>M</kbd> (Window、Linux) 或 <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS)
 
-Now that you have successfully run the app, let's modify it.
+- **iOS** 点击 <kbd>D</kbd> 或 <kbd>Ctrl</kbd> + <kbd>Cmd ⌘</kbd> + <kbd>Z</kbd> 打开**开发者菜单**
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+- **Android** 和 **iOS** 点击 <kbd>R</kbd> 刷新应用
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+### 🔧 调试
 
-## Congratulations! :tada:
+- 命令行中点击 <kbd>J</kbd> 打开 react-native 调试工具、或使用 `Flipper` 进行调试
 
-You've successfully run and modified your React Native App. :partying_face:
+- 详细调试方法请查看官方文档 [中文](https://rn.nodejs.cn/docs/debugging) [英文](https://reactnative.dev/docs/debugging)
 
-### Now what?
+### 其他
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+- 了解更多react-native相关信息，查看官方文档 [中文](https://rn.nodejs.cn/) [英文](https://reactnative.dev/)
 
-# Troubleshooting
+- 故障排除 [中文](https://rn.nodejs.cn/docs/troubleshooting) [英文](https://reactnative.dev/docs/troubleshooting)
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+正在持续完善中！😘

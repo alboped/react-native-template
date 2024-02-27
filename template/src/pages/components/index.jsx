@@ -5,14 +5,21 @@ import {
   GridList,
   Spacings,
   TouchableOpacity,
+  Assets,
   Colors,
+  Icon,
 } from '@/components/ui-lib';
 
 const componentData = [
   {
     title: '基础组件',
     components: [
-      { name: 'View', label: '视图', routeName: 'View' },
+      {
+        name: 'View',
+        label: '视图',
+        routeName: 'View',
+        icon: Assets.icons.view,
+      },
       { name: 'Text', label: '文本', routeName: 'Text' },
       { name: 'Color', label: '颜色', routeName: 'Color' },
       { name: 'Button', label: '按钮', routeName: 'Button' },
@@ -45,11 +52,20 @@ function Components({ navigation }) {
   const renderItem = ({ item }) => (
     <TouchableOpacity
       onPress={() => navigation.push(item.routeName)}
-      style={{ backgroundColor: Colors.blue80, borderRadius: 10 }}
       padding-10
+      className="bg-blue-100 flex-row items-center"
     >
-      <Text>{item.label}</Text>
-      <Text>{item.name}</Text>
+      <View flex>
+        <Text>{item.label}</Text>
+        <Text>{item.name}</Text>
+      </View>
+      {!!item.icon && (
+        <Icon
+          source={item.icon}
+          size={20}
+          color={Colors.$backgroundDangerHeavy}
+        />
+      )}
     </TouchableOpacity>
   );
 

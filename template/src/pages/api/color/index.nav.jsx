@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { View, Text, Colors, Spacings, GridList } from '@/components/ui-lib';
+import { View, Text, Colors, GridList } from '@/components/ui-lib';
 import tinycolor from 'tinycolor2';
 
 function ColorPage() {

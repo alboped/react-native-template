@@ -3,8 +3,6 @@
  */
 import { Colors, Typography } from '@/components/ui-lib';
 
-console.log(Colors);
-
 Colors.loadColors({
   error: '#ff2442',
   success: '#00CD8B',

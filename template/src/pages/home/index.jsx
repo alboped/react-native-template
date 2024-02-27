@@ -2,8 +2,6 @@ import React from 'react';
 import { View, Text, Image, Button, Assets } from '@/components/ui-lib';
 
 function HomePage(props) {
-  console.log(props);
-
   return (
     <View flex center>
       <Image

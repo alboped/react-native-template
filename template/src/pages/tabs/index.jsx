@@ -16,6 +16,7 @@ function Tabs() {
     <Tab.Navigator
       screenOptions={({ route }) => ({
         sceneContainerStyle: { backgroundColor: Colors.grey10 },
+        headerTitleAlign: 'center',
         tabBarIcon: ({ color, size }) => {
           return (
             <Icon source={imgMap[route.name]} size={size} tintColor={color} />
