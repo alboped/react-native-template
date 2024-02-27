@@ -4,10 +4,10 @@
 
 ### 主要特点
 
-- 页面路由使用 `react-navigation`；
-- 基础组件库使用 `react-native-ui-lib`；
-- 状态管理使用 `zustand`；
-- 样式管理使用 `tailwind`；
+- 页面路由使用 [`react-navigation`](https://reactnavigation.org/)；
+- 基础组件库使用 [`react-native-ui-lib`](https://wix.github.io/react-native-ui-lib)；
+- 状态管理使用 [`zustand`](https://github.com/pmndrs/zustand)；
+- 样式管理使用 [`tailwind`](https://tailwind.nodejs.cn/)；
 
 ## 开始
 
