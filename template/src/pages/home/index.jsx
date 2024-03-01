@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, Image, Button, Assets } from '@/components/ui-lib';
+import styles from './style';
 
 function HomePage(props) {
   return (
@@ -7,7 +8,7 @@ function HomePage(props) {
       <Image
         source={Assets.icons.phone}
         resizeMode="contain"
-        style={{ width: 150, height: 200 }}
+        style={styles.listItem}
       />
       <Text h5>react-native-template-alboped</Text>
       <View padding-20>

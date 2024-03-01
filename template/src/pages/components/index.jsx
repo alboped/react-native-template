@@ -1,14 +1,15 @@
 import React from 'react';
+import { ScrollView } from 'react-native';
 import {
   View,
   Text,
-  GridList,
-  Spacings,
   TouchableOpacity,
   Assets,
-  Colors,
   Icon,
 } from '@/components/ui-lib';
+import style from './style';
+
+const { icons } = Assets;
 
 const componentData = [
   {
@@ -18,26 +19,52 @@ const componentData = [
         name: 'View',
         label: '视图',
         routeName: 'View',
-        icon: Assets.icons.view,
+        icon: icons.view,
       },
-      { name: 'Text', label: '文本', routeName: 'Text' },
-      { name: 'Color', label: '颜色', routeName: 'Color' },
-      { name: 'Button', label: '按钮', routeName: 'Button' },
-      { name: 'Toast', label: '提示', routeName: 'Toast' },
-      { name: 'Image', label: '图片', routeName: 'Image' },
-      { name: 'Icon', label: '图标', routeName: 'Icon' },
-      { name: 'List', label: '列表', routeName: 'List' },
-      { name: 'Modal', label: '窗口', routeName: 'Modal' },
-      { name: 'Carousel', label: '轮播', routeName: 'Carousel' },
+      { name: 'Text', label: '文本', routeName: 'Text', icon: icons.text },
+      { name: 'Color', label: '颜色', routeName: 'Color', icon: icons.color },
+      { name: 'Button', label: '按钮', routeName: 'Button', icon: icons.block },
+      { name: 'Toast', label: '提示', routeName: 'Toast', icon: icons.message },
+      { name: 'Image', label: '图片', routeName: 'Image', icon: icons.image },
+      { name: 'Icon', label: '图标', routeName: 'Icon', icon: icons.grid },
+      { name: 'List', label: '列表', routeName: 'List', icon: icons.list },
+      { name: 'Modal', label: '窗口', routeName: 'Modal', icon: icons.modal },
+      {
+        name: 'Carousel',
+        label: '轮播',
+        routeName: 'Carousel',
+        icon: icons.carousel,
+      },
     ],
   },
   {
     title: '表单组件',
     components: [
-      { name: 'Input', label: '输入框', routeName: 'Input' },
-      { name: 'Picker', label: '下拉窗口', routeName: 'Picker' },
-      { name: 'Switch', label: '开关', routeName: 'Switch' },
-      { name: 'Checkbox', label: '复选框', routeName: 'Checkbox' },
+      { name: 'Input', label: '输入框', routeName: 'Input', icon: icons.input },
+      {
+        name: 'Picker',
+        label: '选择器',
+        routeName: 'Picker',
+        icon: icons.select,
+      },
+      {
+        name: 'DatePicker',
+        label: '时间选择器',
+        routeName: 'DatePicker',
+        icon: icons.select,
+      },
+      {
+        name: 'Switch',
+        label: '开关',
+        routeName: 'Switch',
+        icon: icons.switch,
+      },
+      {
+        name: 'Checkbox',
+        label: '复选框',
+        routeName: 'Checkbox',
+        icon: icons.check,
+      },
     ],
   },
   {
@@ -48,46 +75,37 @@ const componentData = [
   },
 ];
 
-function Components({ navigation }) {
-  const renderItem = ({ item }) => (
-    <TouchableOpacity
-      onPress={() => navigation.push(item.routeName)}
-      padding-10
-      className="bg-blue-100 flex-row items-center"
-    >
-      <View flex>
-        <Text>{item.label}</Text>
-        <Text>{item.name}</Text>
-      </View>
-      {!!item.icon && (
-        <Icon
-          source={item.icon}
-          size={20}
-          color={Colors.$backgroundDangerHeavy}
-        />
-      )}
-    </TouchableOpacity>
+function ComponentsPage({ navigation }) {
+  const renderItem = (item, index) => (
+    <View key={index} className={['p-2', { width: '50%' }]}>
+      <TouchableOpacity
+        onPress={() => navigation.push(item.routeName)}
+        className={['radius bg-cyan-200 flex-row items-center p-3']}
+      >
+        <View flex>
+          <Text style={style.itemTitle}>{item.label}</Text>
+          <Text>{item.name}</Text>
+        </View>
+        {!!item.icon && <Icon source={item.icon} size={20} color={'red'} />}
+      </TouchableOpacity>
+    </View>
   );
 
   return (
-    <View>
+    <ScrollView>
       <Text center h6>
         组件展示
       </Text>
       {componentData.map((item, index) => (
         <View key={index}>
           <Text margin-20>{item.title}</Text>
-          <GridList
-            data={item.components}
-            renderItem={renderItem}
-            numColumns={2}
-            itemSpacing={Spacings.s3}
-            listPadding={Spacings.s5}
-          />
+          <View row paddingH-10 className="flex-wrap">
+            {item.components.map(renderItem)}
+          </View>
         </View>
       ))}
-    </View>
+    </ScrollView>
   );
 }
 
-export default Components;
+export default ComponentsPage;

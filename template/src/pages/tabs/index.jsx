@@ -6,7 +6,7 @@ const Tab = createBottomTabNavigator();
 
 const imgMap = {
   Home: Assets.icons.smiling,
-  Components: Assets.icons.grid,
+  Components: Assets.icons.puzzle,
   Api: Assets.icons.code,
   Mine: Assets.icons.user,
 };
@@ -22,7 +22,8 @@ function Tabs() {
             <Icon source={imgMap[route.name]} size={size} tintColor={color} />
           );
         },
-      })}>
+      })}
+    >
       <Tab.Screen
         name="Home"
         component={require('../home').default}

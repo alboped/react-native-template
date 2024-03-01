@@ -6,11 +6,13 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
-    "start": "react-native start --experimental-debugger",
+    "start": "react-native start --experimental-debugger --reset-cache",
     "pod-install": "cd ios && pod install",
     "test": "jest"
   },
   "dependencies": {
+    "@alboped/react-native-style": "^1.0.1",
+    "@react-native-community/datetimepicker": "^7.6.2",
     "@react-navigation/bottom-tabs": "^6.5.12",
     "@react-navigation/native": "^6.1.10",
     "@react-navigation/native-stack": "^6.9.18",
