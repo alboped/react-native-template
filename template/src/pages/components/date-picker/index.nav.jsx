@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Picker, DateTimePicker } from '@/components/ui-lib';
+import { View, Picker } from '@/components/ui-lib';
 
 const DatePickerPage = () => {
   const [currentValue, setCurrentValue] = useState('1');
@@ -19,13 +19,7 @@ const DatePickerPage = () => {
   };
 
   return (
-    <View flex>
-      <DateTimePicker
-        title={'Select date'}
-        placeholder={'Placeholder'}
-        mode={'date'}
-      />
-    </View>
+    <View flex></View>
   );
 };
 
