@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, Button, Assets } from '@/components/ui-lib';
+import { View, Text, Image, Button, Assets } from '@/components';
 import styles from './style';
 
 function HomePage(props) {

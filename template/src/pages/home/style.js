@@ -20,7 +20,10 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
   },
-  listItem: {},
+  listItem: {
+    width: '300rpx',
+    height: '300rpx',
+  },
 };
 
 export default styles;

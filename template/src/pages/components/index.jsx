@@ -43,14 +43,26 @@ const componentData = [
       { name: 'Input', label: '输入框', routeName: 'Input', icon: icons.input },
       {
         name: 'Picker',
-        label: '选择器',
+        label: '选择器弹框',
         routeName: 'Picker',
         icon: icons.select,
       },
       {
+        name: 'PickerView',
+        label: '选择器',
+        routeName: 'PickerView',
+        icon: icons.select,
+      },
+      {
         name: 'DatePicker',
-        label: '时间选择器',
+        label: '时间选择器弹框',
         routeName: 'DatePicker',
+        icon: icons.select,
+      },
+      {
+        name: 'DatePickerView',
+        label: '时间选择器',
+        routeName: 'DatePickerView',
         icon: icons.select,
       },
       {

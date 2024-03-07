@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
-import { Dimensions } from 'react-native';
-import {
-  View,
-  Text,
-  Modal,
-  Button,
-  PanningProvider,
-} from '@/components/ui-lib';
+import { View, Modal, Button } from '@/components';
 
 function ModalPage() {
   const [isVisible, setIsVisible] = useState(false);
