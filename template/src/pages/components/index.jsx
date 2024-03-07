@@ -77,10 +77,10 @@ const componentData = [
 
 function ComponentsPage({ navigation }) {
   const renderItem = (item, index) => (
-    <View key={index} className={['p-2', { width: '50%' }]}>
+    <View key={index} className={['p-1', { width: '50%' }]}>
       <TouchableOpacity
         onPress={() => navigation.push(item.routeName)}
-        className={['radius bg-cyan-200 flex-row items-center p-3']}
+        className={['flex-row items-center p-20 rounded-5 bg-blue-100']}
       >
         <View flex>
           <Text style={style.itemTitle}>{item.label}</Text>

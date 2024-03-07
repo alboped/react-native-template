@@ -10,7 +10,6 @@ function TextPage() {
       <Text h3>这是一个标题</Text>
       <Text h4>这是一个标题</Text>
       <Text h5>这是一个标题</Text>
-      <Text h6>这是一个标题</Text>
     </View>
   );
 }

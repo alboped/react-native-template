@@ -11,7 +11,10 @@
     "test": "jest"
   },
   "dependencies": {
-    "@alboped/react-native-style": "^1.0.1",
+    "@alboped/react-native-style": "^1.0.4",
+    "@ant-design/react-native": "^5.1.0",
+    "@react-native-community/segmented-control": "^2.2.2",
+    "@react-native-community/slider": "^4.5.0",
     "@react-navigation/bottom-tabs": "^6.5.16",
     "@react-navigation/native": "^6.1.14",
     "@react-navigation/native-stack": "^6.9.22",

@@ -6,7 +6,7 @@ const { getDefaultConfig, mergeConfig } = require('@react-native/metro-config');
  *
  * @type {import('metro-config').MetroConfig}
  */
-const config = { transformer: {unstable_allowRequireContext: true }};
+const config = { transformer: { unstable_allowRequireContext: true } };
 
 // config.transformer.unstable_allowRequireContext = true;
 

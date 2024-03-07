@@ -377,6 +377,11 @@ PODS:
     - glog
   - react-native-safe-area-context (4.9.0):
     - React-Core
+  - react-native-segmented-control (2.2.2):
+    - React-Core
+  - react-native-slider (4.5.0):
+    - RCT-Folly (= 2021.07.22.00)
+    - React-Core
   - React-NativeModulesApple (0.72.11):
     - hermes-engine
     - React-callinvoker
@@ -551,6 +556,8 @@ DEPENDENCIES:
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
+  - "react-native-segmented-control (from `../node_modules/@react-native-community/segmented-control`)"
+  - "react-native-slider (from `../node_modules/@react-native-community/slider`)"
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
@@ -636,6 +643,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/logger"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
+  react-native-segmented-control:
+    :path: "../node_modules/@react-native-community/segmented-control"
+  react-native-slider:
+    :path: "../node_modules/@react-native-community/slider"
   React-NativeModulesApple:
     :path: "../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios"
   React-perflogger:
@@ -716,6 +727,8 @@ SPEC CHECKSUMS:
   React-jsinspector: a70e8fc7f3ae7982db27e7c114c0ec8c0714c8f5
   React-logger: 9fd8d34baa7930b42a70669ec0f0971083ae5a7b
   react-native-safe-area-context: b97eb6f9e3b7f437806c2ce5983f479f8eb5de4b
+  react-native-segmented-control: 65df6cd0619b780b3843d574a72d4c7cec396097
+  react-native-slider: cc89964e1432fa31aa9db7a0fa9b21e26b5d5152
   React-NativeModulesApple: fd9fb8a2d2d789988f110c3c21c91fa0795fa2c7
   React-perflogger: 800d85d51d4f53efc2eec11f459919752e494db3
   React-RCTActionSheet: 02942b4c0f90bfb9a18f77bf13e486d2a6ba1b6f

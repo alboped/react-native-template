@@ -14,6 +14,7 @@ import {
   ImageProps as ULImageProps,
   TouchableOpacityProps as ULTouchableOpacityProps,
 } from 'react-native-ui-lib';
+import Style from '@alboped/react-native-style';
 
 // 导出所有组件
 export * from 'react-native-ui-lib';
@@ -39,7 +40,7 @@ const useStyleProps = (className: string, style: any) => {
       ? tw.style(...className)
       : tw.style(className);
 
-    const styled = StyleSheet.compose(classStyle, style);
+    const styled = StyleSheet.compose(classStyle, Style.create(style || {}));
 
     return styled;
   }, [className, style]);

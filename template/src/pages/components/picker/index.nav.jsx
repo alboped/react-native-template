@@ -1,74 +1,46 @@
 import React, { useState } from 'react';
-import {
-  View,
-  Text,
-  Colors,
-  Typography,
-  Picker,
-  WheelPicker,
-  LoaderScreen,
-  Button,
-} from '@/components/ui-lib';
-
-const monthItems = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-];
+import { View, Text, Button } from '@/components/ui-lib';
+import { Picker } from '@/components';
 
 const PickerPage = () => {
-  const [currentValue, setCurrentValue] = useState('1');
+  const [visible, setVisible] = useState(false);
+  const [value, setValue] = useState('1');
 
   const items = [
-    { label: 'Item 1', value: '1' },
-    { label: 'Item 2', value: '2' },
-    { label: 'Item 3', value: '3' },
-    { label: 'Item 4', value: '4' },
-    { label: 'Item 5', value: '5' },
-    { label: 'Item 6', value: '6' },
-    { label: 'Item 7', value: '7' },
+    { label: '北京', value: '1' },
+    { label: '上海', value: '2' },
+    { label: '天津', value: '3' },
+    { label: '广州', value: '4' },
+    { label: '深圳', value: '5' },
+    { label: '杭州', value: '6' },
+    { label: '重庆', value: '7' },
+    { label: '成都', value: '8' },
+    { label: '南京', value: '9' },
   ];
-
-  const renderItem = (item, index) => {
-    return <Picker.Item key={index} label={item.label} value={item.value} />;
-  };
 
   return (
     <View flex center>
+      <Button
+        onPress={() => {
+          setVisible(true);
+        }}
+        label="Show Picker"
+      />
       <Picker
-        value={currentValue}
-        placeholder={'Placeholder'}
-        onChange={() => console.log('changed')}
-        useWheelPicker
-      >
-        {items.map(renderItem)}
-      </Picker>
-      {/* <WheelPicker
-        initialValue={'February'}
-        activeTextColor={Colors.$textPrimary}
-        inactiveTextColor={Colors.$textNeutralHeavy}
-        items={monthItems}
-        textStyle={Typography.text60R}
-        numberOfVisibleRows={3}
-      /> */}
-      {/* <WheelPicker
-        items={[
-          { label: 'Yes', value: 'yes' },
-          { label: 'No', value: 'no' },
-          { label: 'Maybe', value: 'maybe' },
-        ]}
-        initialValue={'yes'}
-        onChange={() => console.log('changed')}
-      /> */}
+        data={items}
+        cols={3}
+        onChange={setValue}
+        onDismiss={() => {
+          setVisible(false);
+        }}
+        visible={visible}
+        value={value}
+        onOk={(v, ext) => {
+          setVisible(false);
+          console.log(v);
+          console.log(ext);
+        }}
+      />
     </View>
   );
 };

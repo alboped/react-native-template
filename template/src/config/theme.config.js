@@ -2,6 +2,7 @@
  * UI主题配置
  */
 import { Colors, Typography } from '@/components/ui-lib';
+import { create } from '@alboped/react-native-style';
 
 Colors.loadColors({
   error: '#ff2442',
@@ -10,10 +11,9 @@ Colors.loadColors({
 });
 
 Typography.loadTypographies({
-  h1: { fontSize: 54, fontWeight: '500', lineHeight: 76 },
-  h2: { fontSize: 46, fontWeight: '500', lineHeight: 66 },
-  h3: { fontSize: 38, fontWeight: '500', lineHeight: 56 },
-  h4: { fontSize: 32, fontWeight: '500', lineHeight: 48 },
-  h5: { fontSize: 26, fontWeight: '500', lineHeight: 40 },
-  h6: { fontSize: 20, fontWeight: '500', lineHeight: 36 },
+  h1: create({ fontSize: '62rpx', fontWeight: '500', lineHeight: '88rpx' }),
+  h2: create({ fontSize: '54rpx', fontWeight: '500', lineHeight: '74rpx' }),
+  h3: create({ fontSize: '46rpx', fontWeight: '500', lineHeight: '62rpx' }),
+  h4: create({ fontSize: '38rpx', fontWeight: '500', lineHeight: '54rpx' }),
+  h5: create({ fontSize: '32rpx', fontWeight: '500', lineHeight: '48rpx' }),
 });
